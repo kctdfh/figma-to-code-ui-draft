@@ -20,5 +20,9 @@
     "tailwind-scrollbar": "^1.2.2",
     "tailwindcss": "^2.0.2",
     "autoprefixer": "^10.1.0"
+  },
+  "dependencies": {
+    "feather-icons": "^4.28.0",
+    "highlight.js": "10.5.0"
   }
 }

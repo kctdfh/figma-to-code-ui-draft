@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Figma to Code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.src.css">
+    <script src="node_modules\feather-icons\dist\feather.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/highlight/styles/a11y-dark.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+</head>
+
+<body class="flex flex-col justify-center bg-blue-100">
+    <div id="spacer" class="w-full h-32"></div>
+    <!-- SECTION Tailwind 2 -->
+    <div id="tailwind-default">
+        <div class="ui">
+            <header class="flex flex-row justify-between px-4 py-3 border-b border-gray-400">
+                <span>Figma to Code (HTML, Tailwind, Flutter, SwiftUI</span>
+                <button><i class="hover:text-blue-600 hover:stroke-2 hover:stroke-current"
+                        data-feather="x"></i></button>
+            </header>
+            <div class="flex flex-row h-full">
+                <div class="flex flex-col w-48 border-r">
+                    <header class="flex flex-row justify-center px-4 py-3 space-x-4 border-b-2">
+                        <button class="text-sm font-medium">Frameworks</button>
+                        <button class="text-sm font-medium text-gray-400">About</button>
+                    </header>
+                    <div class="flex flex-col overflow-y-auto">
+                        <span class="py-3 pl-4 text-sm text-gray-300 cursor-default">Web</span>
+                        <button class="flex justify-start py-3 pl-4 text-sm bg-blue-200">
+                            <span>Tailwind 2</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <header class="flex flex-row justify-center py-3 space-x-4 border-b-2 border-l">
+                        <button class="text-sm font-medium">Code</button>
+                        <button class="text-sm font-medium text-gray-400">Tokens</button>
+                        <button class="text-sm font-medium text-gray-400">Config</button>
+                    </header>
+                    <div class="p-4">
+                            <pre class="h-48 overflow-scroll text-sm whitespace-normal">
+                                <code class="json overflow-visible">
+{
+"name": "figma-to-code-ui",
+"version": "1.0.0",
+"description": "UI redesign for the Figma to Code plugin, written in Tailwind",
+"main": "index.html",
+"scripts": {
+"source": "postcss tailwind.css -o styles.src.css",
+"min": "cross-env NODE_ENV=production postcss tailwind.css -o styles.min.css",
+"all": "npm run source && npm run min",
+"config": "tailwind-config-viewer -o"
+},
+"author": "",
+"license": "ISC",
+"devDependencies": {
+"cross-env": "^7.0.3",
+"postcss": "^8.2.4",
+"postcss-cli": "^8.3.1",
+"postcss-import": "^14.0.0",
+"tailwind-config-viewer": "^1.5.0",
+"tailwind-scrollbar": "^1.2.2",
+"tailwindcss": "^2.0.2",
+"autoprefixer": "^10.1.0"
+},
+"dependencies": {
+"feather-icons": "^4.28.0"
+}
+}
+                                </code>
+                            </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- !SECTION -->
+    <script>
+        feather.replace({
+            width: '18px',
+            height: '18px',
+            stroke: '#000',
+            'stroke-width': 1.5
+        })
+    </script>
+
+</body>
+
+</html>
