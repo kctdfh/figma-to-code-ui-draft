@@ -14,45 +14,47 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/highlight/styles/a11y-dark.css">
+    <link rel="stylesheet" href="/highlight/styles/tomorrow-night.css">
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/highlight.min.js"></script>
     <script>
         hljs.initHighlightingOnLoad()
     </script>
 </head>
 
-<body class="flex flex-col justify-center bg-blue-100">
-    <div id="spacer" class="w-full h-32"></div>
-    <!-- SECTION Tailwind 2 -->
-    <div id="tailwind-default">
-        <div class="ui">
-            <header class="flex flex-row justify-between px-4 py-3 border-b border-gray-400">
-                <span>Figma to Code (HTML, Tailwind, Flutter, SwiftUI</span>
+<body class="flex flex-col justify-center py-32 space-y-10 bg-blue-100">
+    <!-- ANCHOR Tailwind 2 / Code -->
+    <div id="tailwind-code">
+        <div class="relative ui">
+            <header
+                class="absolute top-0 left-0 right-0 flex flex-row justify-between px-4 py-3 border-b border-gray-200">
+                <span>Figma to Code (HTML, Tailwind, Flutter, SwiftUI)</span>
                 <button><i class="hover:text-blue-600 hover:stroke-2 hover:stroke-current"
                         data-feather="x"></i></button>
             </header>
-            <div class="flex flex-row h-full">
-                <div class="flex flex-col w-48 border-r">
-                    <header class="flex flex-row justify-center px-4 py-3 space-x-4 border-b-2">
+            <div class="absolute bottom-0 flex flex-row top-12">
+                <div class="flex flex-col w-48 border-r border-gray-200">
+                    <header class="flex flex-row justify-center px-4 py-3 space-x-4 border-b border-gray-200">
                         <button class="text-sm font-medium">Frameworks</button>
-                        <button class="text-sm font-medium text-gray-400">About</button>
+                        <button class="text-sm font-medium text-gray-400 hover:text-blue-500">About</button>
                     </header>
                     <div class="flex flex-col overflow-y-auto">
-                        <span class="py-3 pl-4 text-sm text-gray-300 cursor-default">Web</span>
-                        <button class="flex justify-start py-3 pl-4 text-sm bg-blue-200">
-                            <span>Tailwind 2</span>
-                        </button>
+                        <span class="py-2 pl-4 text-sm text-gray-400 cursor-default bg-gray-50">Web</span>
+                        <button class="py-3 pl-4 text-sm text-left bg-blue-200">Tailwind 2</button>
+                        <button class="py-3 pl-4 text-sm text-left hover:bg-blue-100">HTML</button>
+                        <span class="py-2 pl-4 text-sm text-gray-400 cursor-default bg-gray-50">Mobile</span>
+                        <button class="py-3 pl-4 text-sm text-left hover:bg-blue-100">Fultter</button>
+                        <button class="py-3 pl-4 text-sm text-left hover:bg-blue-100">Swift UI</button>
                     </div>
                 </div>
                 <div class="w-full">
-                    <header class="flex flex-row justify-center py-3 space-x-4 border-b-2 border-l">
+                    <header class="flex flex-row justify-center py-3 space-x-4 border-b border-gray-200">
                         <button class="text-sm font-medium">Code</button>
-                        <button class="text-sm font-medium text-gray-400">Tokens</button>
-                        <button class="text-sm font-medium text-gray-400">Config</button>
+                        <button class="text-sm font-medium text-gray-400 hover:text-blue-500">Tokens</button>
+                        <button class="text-sm font-medium text-gray-400 hover:text-blue-500">Config</button>
                     </header>
                     <div class="p-4">
-                            <pre class="h-48 overflow-scroll text-sm whitespace-normal">
-                                <code class="json overflow-visible">
+                        <pre class="overflow-scroll text-sm whitespace-normal h-52">
+                                <code class="overflow-visible json">
 {
 "name": "figma-to-code-ui",
 "version": "1.0.0",
@@ -83,11 +85,409 @@
                                 </code>
                             </pre>
                     </div>
+                    <div class="flex flex-row p-4 space-x-32 border-t border-gray-200">
+                        <div class="flex flex-col space-y-4">
+                            <p class="text-sm font-medium">Options</p>
+                            <div class="flex flex-row items-center space-x-3 group">
+                                <input class="my-auto" type="checkbox" id="layer-names" name="layer-names">
+                                <label for="layer-names" class="text-sm font-normal">Include layer names</label>
+                            </div>
+                            <div class="flex flex-row items-center space-x-3 group">
+                                <input class="my-auto" type="checkbox" id="use-jsx" name="use-jsx">
+                                <label for="use-jsx" class="text-sm font-normal">Use JSX</label>
+                            </div>
+                        </div>
+                        <div class="flex flex-col flex-1 space-y-4">
+                            <p class="text-sm font-medium">Actions</p>
+                            <div class="flex flex-col">
+                                <button class="flex flex-row items-center p-2 text-sm rounded-md hover:bg-blue-100"><i
+                                        data-feather="copy" class="mr-3"></i>Copy to clipboard</button>
+                                <button class="flex flex-row items-center p-2 text-sm rounded-md hover:bg-blue-100"><i
+                                        data-feather="external-link" class="mr-3"></i>Open in CodePen</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- !SECTION -->
+    <!-- ANCHOR Tailwind 2 / Tokens -->
+    <div id="tailwind-tokens">
+        <div class="relative ui">
+            <header
+                class="absolute top-0 left-0 right-0 flex flex-row justify-between px-4 py-3 border-b border-gray-200">
+                <span>Figma to Code (HTML, Tailwind, Flutter, SwiftUI)</span>
+                <button><i class="hover:text-blue-600 hover:stroke-2 hover:stroke-current"
+                        data-feather="x"></i></button>
+            </header>
+            <div class="absolute bottom-0 left-0 right-0 flex flex-row top-12">
+                <div class="flex flex-col w-48 border-r border-gray-200">
+                    <header class="flex flex-row justify-center px-4 py-3 space-x-4 border-b border-gray-200">
+                        <button class="text-sm font-medium">Frameworks</button>
+                        <button class="text-sm font-medium text-gray-400 hover:text-blue-500">About</button>
+                    </header>
+                    <div class="flex flex-col overflow-y-auto">
+                        <span class="py-2 pl-4 text-sm text-gray-400 cursor-default bg-gray-50">Web</span>
+                        <button class="py-3 pl-4 text-sm text-left bg-blue-200">Tailwind 2</button>
+                        <button class="py-3 pl-4 text-sm text-left hover:bg-blue-100">HTML</button>
+                        <span class="py-2 pl-4 text-sm text-gray-400 cursor-default bg-gray-50">Mobile</span>
+                        <button class="py-3 pl-4 text-sm text-left hover:bg-blue-100">Fultter</button>
+                        <button class="py-3 pl-4 text-sm text-left hover:bg-blue-100">Swift UI</button>
+                    </div>
+                </div>
+                <div class="relative w-full">
+                    <header class="flex flex-row justify-center py-3 space-x-4 border-b border-gray-200">
+                        <button class="text-sm font-medium text-gray-400 hover:text-blue-500">Code</button>
+                        <button class="text-sm font-medium">Tokens</button>
+                        <button class="text-sm font-medium text-gray-400 hover:text-blue-500">Config</button>
+                    </header>
+                    <div class="absolute bottom-0 right-0 flex flex-row top-11">
+                        <div class="w-3/5 p-4 overflow-y-auto border-r border-gray-200">
+                            <p class="mb-6 text-sm">Click on the element to inspect its class list. Tab on the class
+                                name to copy it to clipboard.</p>
+                            <div class="flex flex-col space-y-4">
+                                <p class="text-sm font-medium">Text</p>
+                                <div class="flex flex-col space-y-1">
+                                    <button class="flex flex-row items-center p-2 bg-blue-200 rounded-md"><i
+                                            class="mr-3" data-feather="type"></i><span
+                                            class="text-sm text-left truncate">Some text from component that is very
+                                            long because the component text is long</span></button>
+                                    <button class="flex flex-row items-center p-2 rounded-md hover:bg-blue-100"><i
+                                            class="mr-3" data-feather="type"></i><span
+                                            class="text-sm text-left truncate">Some other text from the
+                                            component</span></button>
+                                </div>
+                                <p class="text-sm font-medium">Element</p>
+                                <div class="flex flex-col space-y-1">
+                                    <button class="flex flex-row items-center p-2 rounded-md hover:bg-blue-100"><i
+                                            class="mr-3" data-feather="layers"></i><span
+                                            class="text-sm text-left truncate">layer name 1</span></button>
+                                    <button class="flex flex-row items-center p-2 rounded-md hover:bg-blue-100"><i
+                                            class="mr-3" data-feather="layers"></i><span
+                                            class="text-sm text-left truncate">layer name 2</span></button>
+                                    <button class="flex flex-row items-center p-2 rounded-md hover:bg-blue-100"><i
+                                            class="mr-3" data-feather="layers"></i><span
+                                            class="text-sm text-left truncate">layer name 3</span></button>
+                                    <button class="flex flex-row items-center p-2 rounded-md hover:bg-blue-100"><i
+                                            class="mr-3" data-feather="layers"></i><span
+                                            class="text-sm text-left truncate">layer name 4</span></button>
+                                </div>
+                                <p class="text-sm font-medium">Color</p>
+                                <div class="flex flex-col space-y-1">
+                                    <button class="flex flex-row items-center p-2 rounded-md hover:bg-blue-100">
+                                        <div class="w-4 h-4 mr-3 bg-red-600 rounded-full"></div>
+                                        <span class="text-sm text-left">#123ABC</span>
+                                    </button>
+                                    <button class="flex flex-row items-center p-2 rounded-md hover:bg-blue-100">
+                                        <div class="w-4 h-4 mr-3 bg-green-600 rounded-full"></div>
+                                        <span class="text-sm text-left">#345XYZ</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col flex-1">
+                            <header class="py-3 pl-4 text-sm font-medium border-b border-gray-200 cursor-default">
+                                Classlist</header>
+                            <div class="flex flex-col flex-1 overflow-y-auto">
+                                <button class="py-3 pl-4 text-sm text-left hover:bg-blue-100">tracking-wide</button>
+                                <button class="py-3 pl-4 text-sm text-left hover:bg-blue-100">text-md</button>
+                                <button class="py-3 pl-4 text-sm text-left hover:bg-blue-100">leading-none</button>
+                                <button class="py-3 pl-4 text-sm text-left hover:bg-blue-100">text-black</button>
+                            </div>
+                            <button
+                                class="py-2 m-4 text-center border border-black rounded-lg hover:bg-blue-200 hover:border-blue-500">Copy
+                                All</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ANCHOR Flutter / Tokens -->
+    <div id="flutter-tokens">
+        <div class="relative ui">
+            <header
+                class="absolute top-0 left-0 right-0 flex flex-row justify-between px-4 py-3 border-b border-gray-200">
+                <span>Figma to Code (HTML, Tailwind, Flutter, SwiftUI)</span>
+                <button><i class="hover:text-blue-600 hover:stroke-2 hover:stroke-current"
+                        data-feather="x"></i></button>
+            </header>
+            <div class="absolute bottom-0 left-0 right-0 flex flex-row top-12">
+                <div class="flex flex-col w-48 border-r border-gray-200">
+                    <header class="flex flex-row justify-center px-4 py-3 space-x-4 border-b border-gray-200">
+                        <button class="text-sm font-medium">Frameworks</button>
+                        <button class="text-sm font-medium text-gray-400 hover:text-blue-500">About</button>
+                    </header>
+                    <div class="flex flex-col overflow-y-auto">
+                        <span class="py-2 pl-4 text-sm text-gray-400 cursor-default bg-gray-50">Web</span>
+                        <button class="py-3 pl-4 text-sm text-left hover:bg-blue-100">Tailwind 2</button>
+                        <button class="py-3 pl-4 text-sm text-left hover:bg-blue-100">HTML</button>
+                        <span class="py-2 pl-4 text-sm text-gray-400 cursor-default bg-gray-50">Mobile</span>
+                        <button class="py-3 pl-4 text-sm text-left bg-blue-200">Fultter</button>
+                        <button class="py-3 pl-4 text-sm text-left hover:bg-blue-100">Swift UI</button>
+                    </div>
+                </div>
+                <div class="relative w-full">
+                    <header class="flex flex-row justify-center py-3 space-x-4 border-b border-gray-200">
+                        <button class="text-sm font-medium text-gray-400 hover:text-blue-500">Code</button>
+                        <button class="text-sm font-medium">Tokens</button>
+                    </header>
+                    <div class="absolute bottom-0 left-0 right-0 flex flex-col p-4 overflow-y-auto top-11">
+                            <p class="mb-6 text-sm">Click on the token to copy it to clipboard</p>
+                            <div class="flex flex-col space-y-4">
+                                <p class="text-sm font-medium">Color</p>
+                                <div class="flex flex-col space-y-1 w-min">
+                                    <button class="flex flex-row items-center p-2 rounded-md hover:bg-blue-100">
+                                        <div class="w-4 h-4 mr-3 bg-red-600 rounded-full"></div>
+                                        <span class="text-sm text-left">#123ABC</span>
+                                    </button>
+                                    <button class="flex flex-row items-center p-2 rounded-md hover:bg-blue-100">
+                                        <div class="w-4 h-4 mr-3 bg-green-600 rounded-full"></div>
+                                        <span class="text-sm text-left">#345XYZ</span>
+                                    </button>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ANCHOR Tailwind 2 / config -->
+    <div id="tailwind-config">
+        <div class="relative ui">
+            <header
+                class="absolute top-0 left-0 right-0 flex flex-row justify-between px-4 py-3 border-b border-gray-200">
+                <span>Figma to Code (HTML, Tailwind, Flutter, SwiftUI)</span>
+                <button><i class="hover:text-blue-600 hover:stroke-2 hover:stroke-current"
+                        data-feather="x"></i></button>
+            </header>
+            <div class="absolute bottom-0 left-0 right-0 flex flex-row top-12">
+                <div class="flex flex-col w-48 border-r border-gray-200">
+                    <header class="flex flex-row justify-center px-4 py-3 space-x-4 border-b border-gray-200">
+                        <button class="text-sm font-medium">Frameworks</button>
+                        <button class="text-sm font-medium text-gray-400 hover:text-blue-500">About</button>
+                    </header>
+                    <div class="flex flex-col overflow-y-auto">
+                        <span class="py-2 pl-4 text-sm text-gray-400 cursor-default bg-gray-50">Web</span>
+                        <button class="py-3 pl-4 text-sm text-left bg-blue-200">Tailwind 2</button>
+                        <button class="py-3 pl-4 text-sm text-left hover:bg-blue-100">HTML</button>
+                        <span class="py-2 pl-4 text-sm text-gray-400 cursor-default bg-gray-50">Mobile</span>
+                        <button class="py-3 pl-4 text-sm text-left hover:bg-blue-100">Fultter</button>
+                        <button class="py-3 pl-4 text-sm text-left hover:bg-blue-100">Swift UI</button>
+                    </div>
+                </div>
+                <div class="relative w-full">
+                    <header class="flex flex-row justify-center py-3 space-x-4 border-b border-gray-200">
+                        <button class="text-sm font-medium text-gray-400 hover:text-blue-500">Code</button>
+                        <button class="text-sm font-medium text-gray-400 hover:text-blue-500">Tokens</button>
+                        <button class="text-sm font-medium">Config</button>
+                    </header>
+                    <div class="absolute bottom-0 left-0 right-0 px-2 py-3 top-11">
+                        <div
+                            class="flex h-full border border-blue-500 border-dashed cursor-pointer group rounded-xl hover:border-blue-900 bg-blue-50 hover:bg-blue-100">
+                            <div class="flex flex-col content-center justify-center mx-auto">
+                                <p class="text-sm font-medium text-center group-hover:text-blue-900">Drag and
+                                    drop<br>your Tailwind 2 config file here<br>or click to select a file</p>
+                                <i class="mx-auto mt-4 stroke-current group-hover:text-blue-900"
+                                    data-feather="upload"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ANCHOR About / how-to -->
+    <div id="about-how">
+        <div class="relative ui">
+            <header
+                class="absolute top-0 left-0 right-0 flex flex-row justify-between px-4 py-3 border-b border-gray-200">
+                <span>Figma to Code (HTML, Tailwind, Flutter, SwiftUI)</span>
+                <button><i class="hover:text-blue-600 hover:stroke-2 hover:stroke-current"
+                        data-feather="x"></i></button>
+            </header>
+            <div class="absolute bottom-0 left-0 right-0 flex flex-row top-12">
+                <div class="flex flex-col w-48 border-r border-gray-200">
+                    <header class="flex flex-row justify-center px-4 py-3 space-x-4 border-b border-gray-200">
+                        <button class="text-sm font-medium text-gray-400 hover:text-blue-500">Frameworks</button>
+                        <button class="text-sm font-medium">About</button>
+                    </header>
+                    <div class="flex flex-col overflow-y-auto">
+                        <button class="py-3 pl-4 text-sm text-left bg-blue-200">Guide</button>
+                        <button class="py-3 pl-4 text-sm text-left hover:bg-blue-100">Contribute</button>
+                        <button class="py-3 pl-4 text-sm text-left hover:bg-blue-100">Acknowledgements</button>
+                    </div>
+                </div>
+                <div class="w-full overflow-y-auto">
+                    <div class="flex flex-col p-4 space-y-4">
+                        <p class="text-sm font-medium cursor-default">Responsive Layout</p>
+                        <div class="flex flex-row space-x-5">
+                            <div class="flex flex-row h-48 p-6 space-x-10 border border-red-600">
+                                <div class="flex flex-col justify-between h-full">
+                                    <div class="p-4 text-red-600 border border-red-600 cursor-default">BAD</div>
+                                    <div class="p-4 text-red-600 border border-red-600 cursor-default">BAD</div>
+                                </div>
+                                <div class="p-4 my-auto text-red-600 border border-red-600 cursor-default">BAD</div>
+                            </div>
+                            <div class="flex flex-row h-48 pt-3 pb-3 pl-3 pr-6 space-x-10 border border-blue-600">
+                                <div class="flex flex-col justify-between h-full p-3 border border-blue-600">
+                                    <div class="p-4 text-blue-600 border border-blue-600 cursor-default">GOOD</div>
+                                    <div class="p-4 text-blue-600 border border-blue-600 cursor-default">GOOD</div>
+                                </div>
+                                <div class="p-4 my-auto text-blue-600 border border-blue-600 cursor-default">GOOD
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-left">The plugin works perfectly when layers are vertically or
+                            horizontally aligned, even if Auto Layout is off. When the layout is more complex, you
+                            can manually group layers to make them aligned.
+                        </p>
+                        <div class="h-px -mx-4 bg-gray-200"></div>
+                        <p class="text-sm font-medium cursor-default">Indenting Swift UI</p>
+                        <p class="text-sm text-left">To re-indent your code on XCode, have a look at this <a
+                                class="text-blue-500 hover:text-blue-700"
+                                href="https://stackoverflow.com/questions/6543026/how-to-format-code-in-xcode/7828337#7828337">Stack
+                                Overflow answer</a></p>
+                        <div class="h-px -mx-4 bg-gray-200"></div>
+                        <p class="text-sm font-medium cursor-default">Testing Tailwind</p>
+                        <p class="text-sm text-left"><a class="text-blue-500 hover:text-blue-700"
+                                href="https://play.tailwindcss.com">Tailwind Play</a> is often better for testing,
+                            compared to CodePen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ANCHOR About / contribute -->
+    <div id="about-contribute">
+        <div class="relative ui">
+            <header
+                class="absolute top-0 left-0 right-0 flex flex-row justify-between px-4 py-3 border-b border-gray-200">
+                <span>Figma to Code (HTML, Tailwind, Flutter, SwiftUI)</span>
+                <button><i class="hover:text-blue-600 hover:stroke-2 hover:stroke-current"
+                        data-feather="x"></i></button>
+            </header>
+            <div class="absolute bottom-0 left-0 right-0 flex flex-row top-12">
+                <div class="flex flex-col w-48 border-r border-gray-200">
+                    <header class="flex flex-row justify-center px-4 py-3 space-x-4 border-b border-gray-200">
+                        <button class="text-sm font-medium text-gray-400 hover:text-blue-500">Frameworks</button>
+                        <button class="text-sm font-medium">About</button>
+                    </header>
+                    <div class="flex flex-col overflow-y-auto">
+                        <button class="py-3 pl-4 text-sm text-left hover:bg-blue-100 ">Guide</button>
+                        <button class="py-3 pl-4 text-sm text-left bg-blue-200">Contribute</button>
+                        <button class="py-3 pl-4 text-sm text-left hover:bg-blue-100">Acknowledgements</button>
+                    </div>
+                </div>
+                <div class="w-full overflow-y-auto">
+                    <div class="p-4">
+                        <p class="text-sm text-left">I have tried to think what would make sense for most people. Still,
+                            bugs can and will happen; ideas will appear. Your mission, should you choose to accept, is
+                            to <a href="https://github.com/bernaferrari/FigmaToCode/issues"
+                                class="text-blue-500 hover:text-blue-700">share them</a> with me. Pull requests are also
+                            more than welcome.</p>
+                        <a href="https://github.com/bernaferrari/FigmaToCode"><i data-feather="github"
+                                class="mt-4"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ANCHOR About / ack -->
+    <div id="about-ack">
+        <div class="relative ui">
+            <header
+                class="absolute top-0 left-0 right-0 flex flex-row justify-between px-4 py-3 border-b border-gray-200">
+                <span>Figma to Code (HTML, Tailwind, Flutter, SwiftUI)</span>
+                <button><i class="hover:text-blue-600 hover:stroke-2 hover:stroke-current"
+                        data-feather="x"></i></button>
+            </header>
+            <div class="absolute bottom-0 left-0 right-0 flex flex-row top-12">
+                <div class="flex flex-col w-48 border-r border-gray-200">
+                    <header class="flex flex-row justify-center px-4 py-3 space-x-4 border-b border-gray-200">
+                        <button class="text-sm font-medium text-gray-400 hover:text-blue-500">Frameworks</button>
+                        <button class="text-sm font-medium">About</button>
+                    </header>
+                    <div class="flex flex-col overflow-y-auto">
+                        <button class="py-3 pl-4 text-sm text-left hover:bg-blue-100 ">Guide</button>
+                        <button class="py-3 pl-4 text-sm text-left hover:bg-blue-100">Contribute</button>
+                        <button class="py-3 pl-4 text-sm text-left bg-blue-200">Acknowledgements</button>
+                    </div>
+                </div>
+                <div class="w-full overflow-y-auto">
+                    <div class="flex flex-col p-4 space-y-4">
+                        <p class="text-sm font-medium cursor-default">Bernardo Ferrari</p>
+                        <p class="text-sm text-left">Designer and developer</p>
+                        <div class="flex flex-row justify-start space-x-3">
+                            <a href=""><i data-feather="twitter"></i></a>
+                            <a href=""><svg version="1.1" id="reddit" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px"
+                                    height="18px" viewBox="0 0 31.553 31.552"
+                                    style="enable-background:new 0 0 31.553 31.552;" xml:space="preserve">
+                                    <g>
+                                        <g>
+                                            <circle cx="11.079" cy="17.836" r="2.126" />
+                                            <path d="M31.553,16.116c0-2.627-2.068-4.764-4.61-4.764c-0.892,0-1.72,0.27-2.425,0.722c-2.187-1.27-4.945-2.059-7.957-2.167
+                                           l1.736-4.984l3.596,0.861c-0.012,0.119-0.035,0.233-0.035,0.355c0,1.982,1.613,3.595,3.596,3.595c1.98,0,3.596-1.612,3.596-3.595
+                                           s-1.615-3.595-3.596-3.595c-1.293,0-2.417,0.69-3.05,1.715l-5.142-1.23l-2.4,6.888c-2.998,0.154-5.727,0.99-7.873,2.294
+                                           c0.043-0.03,0.08-0.064,0.123-0.094c-0.722-0.482-1.579-0.766-2.501-0.766c-2.543,0-4.61,2.136-4.61,4.764
+                                           c0,1.757,0.935,3.281,2.312,4.104c0.564,4.912,6.419,8.789,13.549,8.789c7.176,0,13.061-3.929,13.559-8.886
+                                           C30.699,19.279,31.553,17.8,31.553,16.116z M25.452,4.146c1.099,0,1.994,0.895,1.994,1.995c0,1.099-0.896,1.994-1.994,1.994
+                                           c-1.103,0-1.996-0.895-1.996-1.994C23.456,5.04,24.352,4.146,25.452,4.146z M4.61,12.952c0.363,0,0.705,0.079,1.027,0.203
+                                           c-1.74,1.395-2.909,3.145-3.261,5.077c-0.481-0.562-0.778-1.302-0.778-2.116C1.598,14.372,2.95,12.952,4.61,12.952z M15.86,27.41
+                                           c-6.621,0-12.006-3.572-12.006-7.963c0-4.392,5.385-7.963,12.006-7.963c6.62,0,12.004,3.572,12.004,7.963
+                                           C27.864,23.837,22.48,27.41,15.86,27.41z M29.305,18.058c-0.393-1.88-1.559-3.581-3.272-4.941c0.289-0.098,0.591-0.165,0.91-0.165
+                                           c1.659,0,3.01,1.419,3.01,3.164C29.951,16.85,29.705,17.521,29.305,18.058z" />
+                                            <circle cx="20.221" cy="17.836" r="2.126" />
+                                            <path
+                                                d="M19.879,22.562c-4.504,2.973-8.138,0.172-8.3,0.045c-0.345-0.277-0.847-0.222-1.123,0.121
+                                           c-0.276,0.346-0.224,0.848,0.12,1.125c0.03,0.025,2.106,1.657,5.121,1.657c1.499,0,3.232-0.405,5.062-1.612
+                                           c0.369-0.244,0.471-0.74,0.229-1.107C20.743,22.421,20.247,22.318,19.879,22.562z" />
+                                        </g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                </svg></a>
+                            <a href=""><i data-feather="mail"></i></a>
+                            <a href=""><i data-feather="github"></i></a>
+                        </div>
+                        <div class="h-px -mx-4 bg-gray-200"></div>
+                        <p class="text-sm font-medium cursor-default">You</p>
+                        <p class="text-sm text-left">Contribute with a pull request</p>
+                        <a href="https://github.com/bernaferrari/FigmaToCode"><i data-feather="github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         feather.replace({
             width: '18px',
