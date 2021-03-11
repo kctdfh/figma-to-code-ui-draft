@@ -7,3 +7,27 @@
 .truncate {
     width: 25ch;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-50;
+ }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full;
+ }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 cursor-pointer;
+  }
+
+  ::-webkit-scrollbar-corner {
+    @apply bg-transparent;
+  }

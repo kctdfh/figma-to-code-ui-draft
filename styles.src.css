@@ -31292,6 +31292,39 @@ video {
   width: 25ch;
 }
 
+/* width */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  --tw-bg-opacity: 1;
+  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  --tw-bg-opacity: 1;
+  background-color: rgba(209, 213, 219, var(--tw-bg-opacity));
+  border-radius: 9999px;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

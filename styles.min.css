@@ -574,6 +574,11 @@ video {
   background-color: rgba(220, 38, 38, var(--tw-bg-opacity));
 }
 
+.bg-yellow-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(254, 243, 199, var(--tw-bg-opacity));
+}
+
 .bg-green-600 {
   --tw-bg-opacity: 1;
   background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
@@ -589,19 +594,14 @@ video {
   background-color: rgba(219, 234, 254, var(--tw-bg-opacity));
 }
 
-.bg-blue-200 {
+.hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
-  background-color: rgba(191, 219, 254, var(--tw-bg-opacity));
+  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
 }
 
 .hover\:bg-blue-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgba(219, 234, 254, var(--tw-bg-opacity));
-}
-
-.hover\:bg-blue-200:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgba(191, 219, 254, var(--tw-bg-opacity));
 }
 
 .border-black {
@@ -1004,12 +1004,6 @@ video {
   width: 100%;
 }
 
-.w-min {
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-}
-
 @-webkit-keyframes spin {
   to {
     transform: rotate(360deg);
@@ -1087,6 +1081,39 @@ video {
 
 .truncate {
   width: 25ch;
+}
+
+/* width */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  --tw-bg-opacity: 1;
+  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  --tw-bg-opacity: 1;
+  background-color: rgba(209, 213, 219, var(--tw-bg-opacity));
+  border-radius: 9999px;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
 }
 
 @media (min-width: 640px) {
