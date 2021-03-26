@@ -10,14 +10,6 @@ module.exports = {
     },
     extend: {},
   },
-  variants: {
-    extend: {
-      backgroundColor: ['group-hover'],
-      strokeWidth: ['hover'],
-      stroke: ['hover'],
-      borderWidth: ['hover'],
-      borderColor: ['hover']
-    },
-  },
+  variants: {},
   plugins: [],
 }
