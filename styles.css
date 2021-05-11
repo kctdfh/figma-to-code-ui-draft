@@ -671,6 +671,9 @@ video {
 .h-px {
 	height: 1px;
 }
+.max-h-\[12rem\] {
+	max-height: 12rem;
+}
 .w-48 {
 	width: 12rem;
 }
@@ -688,6 +691,20 @@ video {
 }
 .w-2\/5 {
 	width: 40%;
+}
+.w-\[533px\] {
+	width: 533px;
+}
+.w-\[550px\] {
+	width: 550px;
+}
+.max-w-max {
+	max-width: -webkit-max-content;
+	max-width: -moz-max-content;
+	max-width: max-content;
+}
+.max-w-\[12rem\] {
+	max-width: 12rem;
 }
 .flex-1 {
 	flex: 1 1 0%;
@@ -782,6 +799,9 @@ video {
 }
 .overflow-visible {
 	overflow: visible;
+}
+.overflow-x-scroll {
+	overflow-x: scroll;
 }
 .truncate {
 	overflow: hidden;
