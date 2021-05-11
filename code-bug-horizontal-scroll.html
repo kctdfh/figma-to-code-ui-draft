@@ -21,8 +21,8 @@
     </script>
     <style>
         .hljs {
-            white-space: normal;
-            word-break: normal;
+            white-space: pre;
+            line-break: auto;
             overflow-x: scroll;
             overflow-y: scroll;
         }
@@ -166,16 +166,42 @@
                     </header>
                     <div class="p-4">
                         <pre class="h-48 text-sm whitespace-normal">
-                                <code class="max-h-[12rem] plaintext">ksdfijokdsfijoijodsifsdijodsfjioaIJUSJSDFIJOFDDSIiojjfsdfijodsfjsdiojfdsijofdsjiodfijosfijodsfijods
-                                    ojfdijos jodisfijos dfijosdjiofdsoijf dijosfjo isdoifsdijofijodsjioksdfijokdsfijoijodsifsdijodsfjioaIJUSJSDFIJOFDDSIiojjfsdfijodsfjsdiojfdsijofdsjiodfijosfijodsfijods
-                                    ojfdijos jodisfijos dfijosdjiofdsoijf dijosfjo isdoifsdijofijodsjioksdfijokdsfijoijodsifsdijodsfjioaIJUSJSDFIJOFDDSIiojjfsdfijodsfjsdiojfdsijofdsjiodfijosfijodsfijods
-                                    ojfdijos jodisfijos dfijosdjiofdsoijf dijosfjo isdoifsdijofijodsjioksdfijokdsfijoijodsifsdijodsfjioaIJUSJSDFIJOFDDSIiojjfsdfijodsfjsdiojfdsijofdsjiodfijosfijodsfijods
-                                    ojfdijos jodisfijos dfijosdjiofdsoijf dijosfjo isdoifsdijofijodsjio
-                                    ksdfijokdsfijoijodsifsdijodsfjioaIJUSJSDFIJOFDDSIiojjfsdfijodsfjsdiojfdsijofdsjiodfijosfijodsfijods
-                                    ojfdijos jodisfijos dfijosdjiofdsoijf dijosfjo isdoifsdijofijodsjioksdfijokdsfijoijodsifsdijodsfjioaIJUSJSDFIJOFDDSIiojjfsdfijodsfjsdiojfdsijofdsjiodfijosfijodsfijods
-                                    ojfdijos jodisfijos dfijosdjiofdsoijf dijosfjo isdoifsdijofijodsjioksdfijokdsfijoijodsifsdijodsfjioaIJUSJSDFIJOFDDSIiojjfsdfijodsfjsdiojfdsijofdsjiodfijosfijodsfijods
-                                    ojfdijos jodisfijos dfijosdjiofdsoijf dijosfjo isdoifsdijofijodsjioksdfijokdsfijoijodsifsdijodsfjioaIJUSJSDFIJOFDDSIiojjfsdfijodsfjsdiojfdsijofdsjiodfijosfijodsfijods
-                                    ojfdijos jodisfijos dfijosdjiofdsoijf dijosfjo isdoifsdijofijodsjio</code>
+                            <code class="max-h-[12rem] language-html">
+&lt;div class=&quot;flex flex-row p-4 border-t border-gray-200&quot;&gt;
+    &lt;div class=&quot;flex flex-col w-1/2 space-y-4&quot;&gt;
+        &lt;p class=&quot;text-sm font-medium select-none&quot;&gt;Options&lt;/p&gt;
+        &lt;div class=&quot;flex flex-col space-y-3&quot;&gt;
+            &lt;div class=&quot;flex flex-row items-center space-x-3 select-none group&quot;&gt;
+            &lt;input class=&quot;my-auto hover:ring-blue-200 ring-0 hover:ring-2&quot; type=&quot;checkbox&quot; id=&quot;layer-names&quot;
+                name=&quot;layer-names&quot;&gt;
+                &lt;label for=&quot;layer-names&quot; class=&quot;text-sm font-normal&quot;&gt;Include layer names&lt;/label&gt;
+        &lt;/div&gt;
+            &lt;div class=&quot;flex flex-row items-center space-x-3 select-none group&quot;&gt;
+                &lt;input class=&quot;my-auto hover:ring-blue-200 ring-0 hover:ring-2&quot; type=&quot;checkbox&quot; id=&quot;use-jsx&quot;
+                    name=&quot;use-jsx&quot;&gt;
+                    &lt;label for=&quot;use-jsx&quot; class=&quot;text-sm font-normal&quot;&gt;Use JSX&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-row items-center space-x-3 select-none group&quot;&gt;
+            &lt;input class=&quot;my-auto hover:ring-blue-200 ring-0 hover:ring-2 disabled:ring-0 disabled:hover:ring-0&quot;
+                type=&quot;checkbox&quot; id=&quot;jit&quot; name=&quot;use-jit&quot; disabled&gt;
+            &lt;label for=&quot;jit&quot; class=&quot;text-sm font-normal text-gray-400&quot;&gt;Use just-in-time (coming
+                soon)&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;div class=&quot;flex flex-col w-1/2 space-y-4&quot;&gt;
+                    &lt;p class=&quot;text-sm font-medium select-none&quot;&gt;Actions&lt;/p&gt;
+                &lt;div class=&quot;flex flex-col&quot;&gt;
+            &lt;button class=&quot;flex flex-row items-center p-2 text-sm rounded-md hover:bg-gray-100 active:bg-blue-100&quot;&gt;&lt;i
+                data-feather=&quot;copy&quot; width=&quot;16&quot; height=&quot;16&quot; class=&quot;mr-3&quot;&gt;&lt;/i&gt;Copy to
+            clipboard&lt;/button&gt;
+            &lt;button class=&quot;flex flex-row items-center p-2 text-sm rounded-md hover:bg-gray-100 active:bg-blue-100&quot;&gt;&lt;i
+                data-feather=&quot;external-link&quot; width=&quot;16&quot; height=&quot;16&quot; class=&quot;mr-3&quot;&gt;&lt;/i&gt;Open in
+                    CodePen&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                                </code>
                         </pre>
                     </div>
                     <div class="flex flex-row p-4 border-t border-gray-200">
