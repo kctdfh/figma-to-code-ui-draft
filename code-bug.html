@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Figma to Code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script src="node_modules\feather-icons\dist\feather.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/highlight/styles/tomorrow-night.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <style>
+        .hljs {
+            white-space: normal;
+            word-break: break-all;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        button:active {
+            -webkit-transition: all 250ms ease;
+            -ms-transition: all 250ms ease;
+            transition: all 250ms ease;
+        }
+
+        button:hover {
+            -webkit-transition: all 150ms ease;
+            -ms-transition: all 150ms ease;
+            transition: all 150ms ease;
+        }
+
+        button:focus-visible {
+            outline: 3px dashed rgba(59, 130, 246, 1);
+        }
+
+        a {
+            color: rgba(59, 130, 246, 1);
+        }
+
+        a:hover,
+        a:visited:hover {
+            color: rgba(30, 58, 138, 1);
+        }
+
+        a:visited {
+            color: rgba(180, 83, 9, 1);
+        }
+
+        .ui {
+            width: 725px;
+            height: 475px;
+            margin-right: auto;
+            margin-left: auto;
+            background-color: white;
+        }
+
+        .truncate {
+            width: 25ch;
+        }
+
+        /* scroll bar width */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        /* scroll bar track */
+        ::-webkit-scrollbar-track {
+            background-color: rgba(249, 250, 251, 1);
+        }
+
+        /* scroll bar handle */
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(209, 213, 219, 1);
+            border-radius: 99999px;
+        }
+
+        /* scroll bar handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(156, 163, 175, 1);
+            cursor: pointer;
+        }
+
+        ::-webkit-scrollbar-corner {
+            background-color: transparent;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            user-select: none;
+            cursor: pointer;
+        }
+
+        /* Tooltip text */
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: max-content;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 5px 10px;
+            border-radius: 6px;
+            top: -5px;
+            right: 105%;
+            position: absolute;
+            z-index: 1;
+        }
+
+        /* Show the tooltip text when you mouse over the tooltip container */
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col justify-center py-32 space-y-10 bg-yellow-100">
+    <!-- ANCHOR Tailwind 2 / Code -->
+    <div id="tailwind-code">
+        <div class="relative ui">
+            <header
+                class="absolute top-0 left-0 right-0 flex flex-row justify-between py-2 pl-4 pr-2 border-b border-gray-200">
+                <span class="self-center text-sm select-none">Figma to Code (HTML, Tailwind, Flutter, SwiftUI)</span>
+                <div class="flex flex-row space-x-2">
+                    <button class="p-2 rounded-lg hover:bg-gray-100 active:bg-blue-100"><i
+                            data-feather="info"></i></button>
+                    <button class="p-2 rounded-lg hover:bg-gray-100 active:bg-blue-100"><i
+                            data-feather="x"></i></button>
+                </div>
+            </header>
+            <div class="absolute bottom-0 flex flex-row top-[3.2rem]">
+                <div class="flex flex-col w-48 border-r border-gray-200">
+                    <div class="flex flex-col overflow-y-auto">
+                        <span class="py-3 pl-4 text-sm border-b border-gray-200 select-none">Frameworks</span>
+                        <span class="py-2 pl-4 text-sm text-gray-500 select-none bg-gray-50">Web</span>
+                        <button class="py-3 pl-4 text-sm font-medium text-left bg-blue-50">Tailwind 2</button>
+                        <button class="py-3 pl-4 text-sm text-left hover:bg-gray-100 active:bg-blue-100">HTML</button>
+                        <span class="py-2 pl-4 text-sm text-gray-500 select-none bg-gray-50">Mobile</span>
+                        <button
+                            class="py-3 pl-4 text-sm text-left hover:bg-gray-100 active:bg-blue-100">Fultter</button>
+                        <button class="py-3 pl-4 text-sm text-left hover:bg-gray-100 active:bg-blue-100">Swift
+                            UI</button>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <header class="flex flex-row justify-center py-2 space-x-3 border-b border-gray-200">
+                        <button class="self-center px-2 py-1 text-sm font-medium rounded-md bg-blue-50">Code</button>
+                        <button
+                            class="self-center px-2 py-1 text-sm rounded-md hover:bg-gray-100 active:bg-blue-100">Tokens</button>
+                        <button
+                            class="self-center px-2 py-1 text-sm rounded-md hover:bg-gray-100 active:bg-blue-100">Config</button>
+                    </header>
+                    <div class="p-4">
+                        <pre class="h-48 overflow-y-scroll text-sm whitespace-normal">
+                                <code class="plaintext">ksdfijokdsfijoijodsifsdijodsfjioaIJUSJSDFIJOFDDSIiojjfsdfijodsfjsdiojfdsijofdsjiodfijosfijodsfijods
+                                    ojfdijos jodisfijos dfijosdjiofdsoijf dijosfjo isdoifsdijofijodsjioksdfijokdsfijoijodsifsdijodsfjioaIJUSJSDFIJOFDDSIiojjfsdfijodsfjsdiojfdsijofdsjiodfijosfijodsfijods
+                                    ojfdijos jodisfijos dfijosdjiofdsoijf dijosfjo isdoifsdijofijodsjioksdfijokdsfijoijodsifsdijodsfjioaIJUSJSDFIJOFDDSIiojjfsdfijodsfjsdiojfdsijofdsjiodfijosfijodsfijods
+                                    ojfdijos jodisfijos dfijosdjiofdsoijf dijosfjo isdoifsdijofijodsjioksdfijokdsfijoijodsifsdijodsfjioaIJUSJSDFIJOFDDSIiojjfsdfijodsfjsdiojfdsijofdsjiodfijosfijodsfijods
+                                    ojfdijos jodisfijos dfijosdjiofdsoijf dijosfjo isdoifsdijofijodsjio</code>
+                        </pre>
+                    </div>
+                    <div class="flex flex-row p-4 border-t border-gray-200">
+                        <div class="flex flex-col w-1/2 space-y-4">
+                            <p class="text-sm font-medium select-none">Options</p>
+                            <div class="flex flex-col space-y-3">
+                                <div class="flex flex-row items-center space-x-3 select-none group">
+                                    <input class="my-auto hover:ring-blue-200 ring-0 hover:ring-2" type="checkbox"
+                                        id="layer-names" name="layer-names">
+                                    <label for="layer-names" class="text-sm font-normal">Include layer names</label>
+                                </div>
+                                <div class="flex flex-row items-center space-x-3 select-none group">
+                                    <input class="my-auto hover:ring-blue-200 ring-0 hover:ring-2" type="checkbox"
+                                        id="use-jsx" name="use-jsx">
+                                    <label for="use-jsx" class="text-sm font-normal">Use JSX</label>
+                                </div>
+                                <div class="flex flex-row items-center space-x-3 select-none group">
+                                    <input
+                                        class="my-auto hover:ring-blue-200 ring-0 hover:ring-2 disabled:ring-0 disabled:hover:ring-0"
+                                        type="checkbox" id="jit" name="use-jit" disabled>
+                                    <label for="jit" class="text-sm font-normal text-gray-400">Use just-in-time (coming
+                                        soon)</label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="flex flex-col w-1/2 space-y-4">
+                            <p class="text-sm font-medium select-none">Actions</p>
+                            <div class="flex flex-col">
+                                <button
+                                    class="flex flex-row items-center p-2 text-sm rounded-md hover:bg-gray-100 active:bg-blue-100"><i
+                                        data-feather="copy" width="16" height="16" class="mr-3"></i>Copy to
+                                    clipboard</button>
+                                <button
+                                    class="flex flex-row items-center p-2 text-sm rounded-md hover:bg-gray-100 active:bg-blue-100"><i
+                                        data-feather="external-link" width="16" height="16" class="mr-3"></i>Open in
+                                    CodePen</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        feather.replace({
+            width: '18px',
+            height: '18px',
+            stroke: '#000',
+            'stroke-width': 1.5
+        });
+    </script>
+
+</body>
+
+</html>

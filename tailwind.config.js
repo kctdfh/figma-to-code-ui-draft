@@ -1,6 +1,8 @@
 module.exports = {
+  mode: 'jit',
   purge: [
-    "index.html"
+    "index.html",
+    "code-bug.html"
   ],
   darkMode: false,
   theme: {
